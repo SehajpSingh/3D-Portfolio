@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const About = () => {
   return (
@@ -7,29 +7,31 @@ const About = () => {
 }
 export default About 
 
-/*import React from 'react';
-import Tilt from 'react-tilt';
-import { motion } from 'framer-motion';
-
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import { style } from 'framer-motion/client';
-import { strToU8 } from 'three/examples/jsm/libs/fflate.module.js';
+*/
+
+
+import React from 'react'
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+
+const textVariant = () => ({
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
+})
 
 const About = () => {
   return (
-  <>
-    <motion.div>
-      <p className={styles.sectionSubText}
-      >Introduction</p>
-      <h2 className={styles.sectionHeadText}
-      >Overview.</h2>
-    </motion.div>
-  </>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      </motion.div>
   )
 }
 
-export default About
+export default About;
 
-*/
+

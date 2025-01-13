@@ -9,6 +9,15 @@ const Computers = ({ isMobile }) => {
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
       <pointLight intensity={1} />
+
+      <spotLight
+        position={[-20, 50, 10]}
+        //angle={0.12}
+        penumbra={1}
+        intensity={0.5}
+       
+      />
+
       
       {/*
       <spotLight
@@ -30,7 +39,7 @@ const Computers = ({ isMobile }) => {
       rotation={[-0.01,-0.2,-0.1]}
       />
     </mesh>
-  )
+  );
 }
 
 const ComputerCanvas = () => {
